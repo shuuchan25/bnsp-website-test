@@ -14,7 +14,7 @@
                     <div class="col-lg-4">
                         <div class="px-4  pb-5">
                             <div class="">
-                                <h1>{{ $newsData }}</h1>
+                                {{-- <h1>{{ $newsData }}</h1> --}}
                             </div>
                             <div class="d-flex gap-2 align-items-center justify-content-center pt-3 border-top">
                                 <h6 class="m-0">News</h6>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="px-4">
                             <div class="">
-                                <h1>{{ $articleData }}</h1>
+                                {{-- <h1>{{ $articleData }}</h1> --}}
                             </div>
                             <div class="d-flex gap-2 align-items-center justify-content-center pt-3 border-top">
 
@@ -33,7 +33,7 @@
                     <div class="col-lg-4">
                         <div class="px-4  pb-5">
                             <div class="">
-                                <h1>{{ $artData }}</h1>
+                                {{-- <h1>{{ $artData }}</h1> --}}
                             </div>
                             <div class="d-flex gap-2 align-items-center justify-content-center pt-3 border-top">
 
@@ -42,7 +42,7 @@
                         </div>
                         <div class="px-4">
                             <div class="">
-                                <h1>{{ $scheduleData }}</h1>
+                                {{-- <h1>{{ $scheduleData }}</h1> --}}
                             </div>
                             <div class="d-flex gap-2 align-items-center justify-content-center pt-3 border-top">
 
@@ -53,7 +53,7 @@
                     <div class="col-lg-4">
                         <div class="px-4 pb-5">
                             <div class="">
-                                <h1>{{ $reviewData }}</h1>
+                                {{-- <h1>{{ $reviewData }}</h1> --}}
                             </div>
                             <div class="d-flex gap-2 align-items-center justify-content-center pt-3 border-top">
 
@@ -65,5 +65,4 @@
             </div>
         </div>
     </section>
-
 @endsection

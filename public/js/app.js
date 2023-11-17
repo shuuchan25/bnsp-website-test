@@ -71,6 +71,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".product-slider", {
+        pagination: {
+            el: ".product-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        spaceBetween: 15,
+        slidesPerView: 4, // Set to 1 to display one slide at a time
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        // loop: true,
+        breakpoints: {
+            375: {
+                slidesPerView: 1,
+            },
+            // Ketika lebar viewport kurang dari atau sama dengan 768px
+            768: {
+                slidesPerView: 2, // Ubah jumlah slide menjadi 2
+            },
+            // Ketika lebar viewport kurang dari atau sama dengan 992px
+            992: {
+                slidesPerView: 4, // Ubah jumlah slide menjadi 4
+            },
+            // Dan seterusnya...
+        },
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".gallery-slider", {
         pagination: {
@@ -106,77 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".release-slider", {
-        pagination: {
-            el: ".release-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        spaceBetween: 15,
-        slidesPerView: 6, // Set to 1 to display one slide at a time
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        // loop: true,
-        breakpoints: {
-            375: {
-                slidesPerView: 2,
-            },
-            // Ketika lebar viewport kurang dari atau sama dengan 768px
-            768: {
-                slidesPerView: 3, // Ubah jumlah slide menjadi 2
-            },
-            // Ketika lebar viewport kurang dari atau sama dengan 992px
-            992: {
-                slidesPerView: 5,
-            },
-            1440: {
-                slidesPerView: 6,
-            },
-        },
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".review-slider", {
-        pagination: {
-            el: ".review-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        spaceBetween: 15,
-        slidesPerView: 6, // Set to 1 to display one slide at a time
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        // loop: true,
-        breakpoints: {
-            375: {
-                slidesPerView: 2,
-            },
-            // Ketika lebar viewport kurang dari atau sama dengan 768px
-            768: {
-                slidesPerView: 3, // Ubah jumlah slide menjadi 2
-            },
-            // Ketika lebar viewport kurang dari atau sama dengan 992px
-            992: {
-                slidesPerView: 5,
-            },
-            1440: {
-                slidesPerView: 6,
-            },
-        },
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".article-slider", {

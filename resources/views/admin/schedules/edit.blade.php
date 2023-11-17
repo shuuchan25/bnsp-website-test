@@ -20,8 +20,8 @@
                                 <label for="">Title</label>
                                 <div class="w-100">
                                     <input type="text" name="name" id="name"
-                                        class="@error('name') is-invalid @enderror" value="{{ old('name', $schedule->name) }}"
-                                        required placeholder="Title">
+                                        class="@error('name') is-invalid @enderror"
+                                        value="{{ old('name', $schedule->name) }}" required placeholder="Title">
                                     @error('name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -33,8 +33,8 @@
                                 <label for="">Slug</label>
                                 <div class="w-100">
                                     <input type="text" name="slug" id="slug"
-                                        class="@error('slug') is-invalid @enderror" value="{{ old('slug', $schedule->slug) }}"
-                                        required placeholder="Slug">
+                                        class="@error('slug') is-invalid @enderror"
+                                        value="{{ old('slug', $schedule->slug) }}" required placeholder="Slug">
                                     @error('slug')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -49,8 +49,8 @@
                                 <label for="">Release Date</label>
                                 <div class="w-100">
                                     <input type="text" name="date" id="date"
-                                        class="@error('date') is-invalid @enderror" value="{{ old('date', $schedule->date) }}"
-                                        required placeholder="Nama">
+                                        class="@error('date') is-invalid @enderror"
+                                        value="{{ old('date', $schedule->date) }}" required placeholder="Nama">
                                     @error('date')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -62,8 +62,8 @@
                                 <label for="">Genre</label>
                                 <div class="w-100">
                                     <input type="text" name="genre" id="genre"
-                                        class="@error('genre') is-invalid @enderror" value="{{ old('genre', $schedule->genre) }}"
-                                        required placeholder="Slug">
+                                        class="@error('genre') is-invalid @enderror"
+                                        value="{{ old('genre', $schedule->genre) }}" required placeholder="Slug">
                                     @error('genre')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -103,45 +103,45 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="d-block d-md-flex w-100 gap-3 align-items-center justify-content-between pt-3">
+                        <div class="d-block d-md-flex w-100 gap-3 align-items-center justify-content-between pt-3">
+                            <div class="w-100">
+                                <label for="">Cover Image (Max. 1 file & 5MB)</label>
                                 <div class="w-100">
-                                    <label for="">Cover Image (Max. 1 file & 5MB)</label>
-                                    <div class="w-100">
-                                        <input type="file" name="image" id="image"
-                                            class="@error('image') is-invalid @enderror"
-                                            value="{{ old('image', $schedule->image) }}" onchange="previewImage()">
-                                        @error('image')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-
-                                    </div>
-                                    <div id="image-preview" class="image-list w-100 pt-2">
-                                        <div class="image-card">
-                                            <img src="{{ asset('storage/' . $schedule->image) }}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-100 pt-3">
-                                <div class="w-100 pt-3">
-                                    <label for="synopsis">Synopsis</label>
-                                    <input type="hidden" name="synopsis" id="synopsis"
-                                        value="{{ old('synopsis', $schedule->synopsis) }}">
-                                    @error('synopsis')
+                                    <input type="file" name="image" id="image"
+                                        class="@error('image') is-invalid @enderror"
+                                        value="{{ old('image', $schedule->image) }}" onchange="previewImage()">
+                                    @error('image')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
                                     @enderror
-                                    <trix-editor input="synopsis"></trix-editor>
+
+                                </div>
+                                <div id="image-preview" class="image-list w-100 pt-2">
+                                    <div class="image-card">
+                                        <img src="{{ asset('storage/' . $schedule->image) }}" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="modal-footer w-100">
-                                <button type="button" class="btn cancel-btn mb-0"
-                                    onclick="location.href='/admin/schedules'">Cancel</button>
-                                <button type="submit" class="btn save-btn mb-0 me-0">Save</button>
+                        </div>
+                        <div class="w-100 pt-3">
+                            <div class="w-100 pt-3">
+                                <label for="synopsis">Synopsis</label>
+                                <input type="hidden" name="synopsis" id="synopsis"
+                                    value="{{ old('synopsis', $schedule->synopsis) }}">
+                                @error('synopsis')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                <trix-editor input="synopsis"></trix-editor>
                             </div>
+                        </div>
+                        <div class="modal-footer w-100">
+                            <button type="button" class="btn cancel-btn mb-0"
+                                onclick="location.href='/admin/schedules'">Cancel</button>
+                            <button type="submit" class="btn save-btn mb-0 me-0">Save</button>
+                        </div>
                     </form>
                 </div>
                 {{-- <div class="w-100 pt-3 mt-3 border-top">
@@ -181,8 +181,7 @@
                         <h5>
                             Gambar
                         </h5>
-                        @if (isset($schedule->image) ||
-                                (isset($other_images) && (is_array($other_images) || is_object($other_images)) && count($other_images)) > 0)
+                        @if (isset($schedule->image) || (isset($other_images) && (is_array($other_images) || is_object($other_images)) && count($other_images)) > 0)
                             <div class="image-list pt-3 w-100 d-flex gap-2">
                                 <div class="image-item pe-4 me-3 border-end">
                                     <div class="image-card mb-1">
@@ -198,7 +197,7 @@
                                         </div>
                                         <form action="{{ route('admin.hotelimages.destroy', $other_image->id) }}"
                                             method="POST"
-                                            onsubmit="return confirm('Apakah anda yakin ingin menghapus ini?')">
+                                            onsubmit="return confirm('Are you sure you want to delete this data?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="delete-item">

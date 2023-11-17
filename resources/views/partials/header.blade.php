@@ -2,11 +2,13 @@
     <div class="container w-100">
         <div class="w-100 d-flex align-items-center justify-content-between">
             <div class="">
-                <h4 class="m-0"><i class="me-2"><svg fill="#fff" height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 512.002 512.002" xml:space="preserve">
-               <g>
-                   <g>
-                       <path d="M469.335,0.002h-64c-5.658,0-11.084,2.248-15.085,6.248l-52.993,52.993c-11.025-34.365-43.227-59.242-81.255-59.242
+                <h4 class="m-0"><i class="me-2"><svg fill="#fff" height="40px" width="40px" version="1.1"
+                            id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M469.335,0.002h-64c-5.658,0-11.084,2.248-15.085,6.248l-52.993,52.993c-11.025-34.365-43.227-59.242-81.255-59.242
                            s-70.23,24.877-81.255,59.242L121.752,6.248C117.751,2.248,112.325,0,106.667,0h-64C30.885,0,21.333,9.551,21.333,21.333
                            c0,11.782,9.551,21.333,21.333,21.333H97.83l82.919,82.919c3.124,5.829,6.913,11.245,11.253,16.165v50.252h-25.389
                            c-32.872,0-60.417,24.927-63.681,57.636L90.133,377.632c-3.775,37.669,25.821,70.37,63.681,70.37h19.544
@@ -40,10 +42,10 @@
                            c10.951,0,20.138,8.314,21.225,19.207l12.8,128.004c1.258,12.552-8.61,23.456-21.226,23.456h-16.853v-85.333
                            c0-1.396-0.04-2.785-0.108-4.168c-0.027-0.568-0.079-1.129-0.117-1.694c-0.053-0.76-0.1-1.522-0.173-2.278
                            c-0.085-0.896-0.197-1.783-0.309-2.67c-0.048-0.373-0.089-0.747-0.142-1.119c-0.163-1.165-0.355-2.32-0.565-3.47
-                           c-0.006-0.034-0.012-0.069-0.018-0.103c-2.848-15.513-9.882-29.553-19.901-40.911v-28.921H345.391z"/>
-                   </g>
-               </g>
-               </svg></i>Motor Club</h4>
+                           c-0.006-0.034-0.012-0.069-0.018-0.103c-2.848-15.513-9.882-29.553-19.901-40.911v-28.921H345.391z" />
+                                </g>
+                            </g>
+                        </svg></i>Motor Club</h4>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFront"
                 aria-controls="navbarFront" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,17 +53,16 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbarFront">
-            <div class="navbar-nav mx-lg-0 mx-auto">
+            <div class="navbar-nav w-100 mx-lg-0 mx-auto">
                 <a class="nav-link {{ Request::is('/') ? 'active-nav' : '' }}" aria-current="page"
                     href="/">Home</a>
-                <a class="nav-link {{ Request::is('articles*') ? 'active-nav' : '' }}"
-                    href="/articles/index">About Us</a>
-                <a class="nav-link {{ Request::is('news*') ? 'active-nav' : '' }}" href="/news/index">Profile</a>
+                <a class="nav-link {{ Request::is('about*') ? 'active-nav' : '' }}" href="#about">About</a>
+                <a class="nav-link {{ Request::is('news*') ? 'active-nav' : '' }}" href="/profile">Profile</a>
                 <a class="nav-link {{ Request::is('reviews*') ? 'active-nav' : '' }}" href="#vision">Vision</a>
-                <a class="nav-link {{ Request::is('schedules*') ? 'active-nav' : '' }}"
-                    href="/schedules/index">Product</a>
-                <a class="nav-link {{ Request::is('arts*') ? 'active-nav' : '' }}" href="/arts/index">Contact</a>
-                <button class="primary-button offcanvas-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
+                <a class="nav-link {{ Request::is('schedules*') ? 'active-nav' : '' }}" href="#product">Product</a>
+                <a class="nav-link {{ Request::is('arts*') ? 'active-nav' : '' }}" href="#footer">Contact</a>
+                <button class="primary-button offcanvas-button" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
             </div>
         </div>
     </div>

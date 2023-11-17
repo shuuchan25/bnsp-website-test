@@ -4,7 +4,7 @@
         @include('admin.partials.sidebar')
 
         <div class="page-content">
-            <div class="header d-flex align-items-center justify-content-between pb-lg-4 pb-2">
+            <div class="header d-flex align-items-center justify-content-between pb-2">
                 <div class="">
                     <p class="">Hi Admin,</p>
                     <h3 class="">About</h3>
@@ -31,7 +31,7 @@
                                 <label for="">Slogan</label>
                                 <div class="w-100">
                                     <input type="text" name="slogan" class="" placeholder=""
-                                        value="{{ $abouts['slogan'] }}" required>
+                                        value="{{ $datas['slogan'] }}" required>
                                 </div>
                             </div>
                         </div>
@@ -40,20 +40,27 @@
                                 <label for="">Image</label>
                                 <div class="w-100">
                                     <input type="file" name="image" id="image" accept="image/*" class="file-input"
-                                        onchange="previewImage()" @if (!$abouts->image) required @endif>
+                                        onchange="previewImage()" @if (!$datas->image)  @endif>
                                 </div>
                             </div>
                         </div>
                         <div id="image-preview" class="w-100 pt-2">
-                            <img src="{{ $abouts->image_url }}" alt="" class="image-card">
+                            <img src="{{ $datas->image_url }}" alt="" class="image-card">
+                        </div>
+                        <div class="w-100 pt-3">
+                            <label for="">Video Link</label>
+                            <div class="">
+                                <input type="text" class="" name="video" placeholder=""
+                                    value="{{ $datas['video'] }}" required>
+                            </div>
                         </div>
                         <div class="w-100 pt-3">
                             <label for="">About</label>
-                            <input type="hidden" name="desc" id="desc" value="{{ $abouts['desc'] }}">
+                            <input type="hidden" name="desc" id="desc" value="{{ $datas['desc'] }}">
                             <trix-editor input="desc"></trix-editor>
                         </div>
                         <div class="modal-footer w-100">
-                            <button type="submit" class="btn save-btn mb-0 me-0">Save</button>
+                            <button type="submit" class="btn save-btn mb-0 me-0">Simpan</button>
                         </div>
                     </form>
 
@@ -81,7 +88,7 @@
                         reader.onload = function(event) {
                             var img = document.createElement('img');
                             img.src = event.target.result;
-                            img.classList.add('image-card');
+                            img.classList.add('image-card'); // Tambahkan kelas 'preview-image'
                             preview.appendChild(img);
                         }
 
@@ -93,4 +100,3 @@
 
     </section>
 @endsection
-

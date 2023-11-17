@@ -44,8 +44,8 @@
                 <div class="container">
                     <div class="vision-card row ">
                         <div class="col-lg-4">
-                            <div class="d-flex justify-content-center align-items-center p-4 h-100">
-                                <svg fill="#fff" width="170px" height="170px" viewBox="0 0 32 32" version="1.1"
+                            <div class="d-flex justify-content-center align-items-center p-3 h-100">
+                                <svg fill="#fff" width="150px" height="150px" viewBox="0 0 32 32" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <title>hand-holding-hand</title>
                                     <path
@@ -56,8 +56,8 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="d-flex justify-content-center align-items-center p-4 h-100">
-                                <h4>Menjadi mitra terpercaya bagi komunitas sepeda motor dalam mewujudkan komunitas sepeda
-                                    motor yang unik dan personal.</h4>
+                                <h5>Menjadi pusat kegiatan dan inspirasi bagi komunitas sepeda motor, mempromosikan
+                                    kebebasan berkendara dan solidaritas.</h5>
                             </div>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
                 <div class="row gx-3 mission pt-3">
                     <div class="col-lg-4 col-md-12">
                         <div class="mission-card">
-                            <div class="py-4">
-                                <svg fill="#fff" width="170px" height="170px" viewBox="0 0 24 24" id="quality-5"
+                            <div class="py-2">
+                                <svg fill="#fff" width="150px" height="150px" viewBox="0 0 24 24" id="quality-5"
                                     data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color">
                                     <polyline id="secondary" points="10 10 11.33 11.5 14 8.5"
                                         style="fill: none; stroke: white; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
@@ -84,15 +84,15 @@
                                     </circle>
                                 </svg>
                             </div>
-                            <div class="text-center pb-4">
-                                <h4>Memberikan solusi custom equipment inovatif dan berkualitas tinggi.</h4>
+                            <div class="text-center">
+                                <h5>Mengorganisir acara dan kegiatan yang memperkuat ikatan antaranggota.</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="mission-card">
-                            <div class="py-4">
-                                <svg fill="#fff" width="170px" height="170px" viewBox="0 0 24 24" id="quality-5"
+                            <div class="py-2">
+                                <svg fill="#fff" width="150px" height="150px" viewBox="0 0 24 24" id="quality-5"
                                     data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color">
                                     <polyline id="secondary" points="10 10 11.33 11.5 14 8.5"
                                         style="fill: none; stroke: white; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
@@ -109,15 +109,15 @@
                                     </circle>
                                 </svg>
                             </div>
-                            <div class="text-center pb-4">
-                                <h4>Menyediakan pengalaman belanja yang memuaskan dan ramah pengguna.</h4>
+                            <div class="text-center">
+                                <h5>Menciptakan platform untuk berbagi pengalaman dan pengetahuan sepeda motor.</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="mission-card">
-                            <div class="py-4">
-                                <svg fill="#fff" width="170px" height="170px" viewBox="0 0 24 24" id="quality-5"
+                            <div class="pb-2">
+                                <svg fill="#fff" width="150px" height="150px" viewBox="0 0 24 24" id="quality-5"
                                     data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color">
                                     <polyline id="secondary" points="10 10 11.33 11.5 14 8.5"
                                         style="fill: none; stroke: white; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
@@ -134,9 +134,8 @@
                                     </circle>
                                 </svg>
                             </div>
-                            <div class="text-center pb-4">
-                                <h4>Mendukung dan memperkuat komunitas sepeda motor melalui produk dan layanan yang kami
-                                    tawarkan.</h4>
+                            <div class="text-center">
+                                <h5>Menyediakan merchandise berkualitas untuk memperkuat identitas komunitas.</h5>
                             </div>
                         </div>
                     </div>
@@ -155,59 +154,23 @@
                 </div>
                 <div class="swiper-container article-slider position-relative">
                     <div class="swiper-wrapper article-wrapper">
-                        {{-- @if ($articles->count() > 0)
-                            @foreach ($articles as $article) --}}
-                        <div class="swiper-slide article-slide" onclick="location.href='/article/'">
-                            <div class="article-image">
-                                <img src="../assets/images/bike.jpeg" alt="">
-                            </div>
-                            <div class="article-info">
-                                <h6><a href="/articles//detail"></a>Disini judul artikel terbaru</h6>
-                                <p>2023.12.1</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide article-slide" onclick="location.href='/article/'">
-                            <div class="article-image">
-                                <img src="../assets/images/bike.jpeg" alt="">
-                            </div>
-                            <div class="article-info">
-                                <h6><a href="/articles//detail"></a>Disini judul artikel terbaru</h6>
-                                <p>2023.12.1</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide article-slide" onclick="location.href='/article/'">
-                            <div class="article-image">
-                                <img src="../assets/images/bike.jpeg" alt="">
-                            </div>
-                            <div class="article-info">
-                                <h6><a href="/articles//detail"></a>Disini judul artikel terbaru</h6>
-                                <p>2023.12.1</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide article-slide" onclick="location.href='/article/'">
-                            <div class="article-image">
-                                <img src="../assets/images/bike.jpeg" alt="">
-                            </div>
-                            <div class="article-info">
-                                <h6><a href="/articles//detail"></a>Disini judul artikel terbaru</h6>
-                                <p>2023.12.1</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide article-slide" onclick="location.href='/article/'">
-                            <div class="article-image">
-                                <img src="../assets/images/bike.jpeg" alt="">
-                            </div>
-                            <div class="article-info">
-                                <h6><a href="/articles//detail"></a>Disini judul artikel terbaru</h6>
-                                <p>2023.12.1</p>
-                            </div>
-                        </div>
-                        {{-- @endforeach
+                        @if ($articles->count() > 0)
+                            @foreach ($articles as $article)
+                                <div class="swiper-slide article-slide" onclick="location.href='/article/'">
+                                    <div class="article-image">
+                                        <img src="{{ Storage::url($article->image) }}" alt="">
+                                    </div>
+                                    <div class="article-info">
+                                        <h6><a href="/articles/{{ $article->slug }}/detail"></a>{{ $article->title }}</h6>
+                                        <p>{{ $article->published_at }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
                         @else
                             <div class="pt-5">
                                 <p>Nothing article found.</p>
                             </div>
-                        @endif --}}
+                        @endif
 
                     </div>
                     <div class="swiper-pagination article-pagination"></div>
@@ -217,11 +180,13 @@
             </div>
         </div>
 
+        <div class="" id="about"></div>
+
         <div class="about-container">
             <div class="row gx-5 container">
                 <div class="col-lg-5">
                     <div class="about-image">
-                        <img src="../assets/images/bike.jpeg" alt="">
+                        <img src="{{ Storage::url($about->image) }}" alt="">
                     </div>
                 </div>
                 <div class="about-info col-lg-7 ml-lg-5 mt-lg-0 mt-3">
@@ -229,66 +194,14 @@
                         <h1>About</h1>
                         <div class="w-100" style="border: 1px solid white;"></div>
                     </div>
-                    {{-- <p>{!! strip_tags($abouts->desc) !!}</p> --}}
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis saepe, quia magni at inventore aliquam
-                        quisquam dolores corporis. Reprehenderit, rem eius facilis perferendis voluptatem, dolore enim
-                        dolor, porro sunt recusandae dolorum nulla quos provident praesentium repellendus iure quibusdam
-                        deserunt laborum asperiores numquam atque nihil. Repellendus vel ducimus sint, perferendis culpa
-                    </p>
+                    <div class="text-white">
+                        {!! \Illuminate\Support\Str::words($about->desc, 90) !!}
+                    </div>
                     <button class="primary-button mt-4" onclick="location.href='/event/index'">
                         More
                     </button>
                 </div>
 
-            </div>
-        </div>
-
-        <div class="gallery-container">
-
-            <div class="container overflow-hidden">
-                <div class="w-100 mb-3" style="border: 1px solid white;"></div>
-                <div class="d-flex align-items-center justify-content-between gap-4 pt-5">
-                    <h1>Gallery</h1>
-
-                    <button class="primary-button" onclick="location.href='/arts/index'"
-                        style="">
-                        More
-                    </button>
-                </div>
-                <div class="swiper-container gallery-slider position-relative">
-                    <div class="swiper-wrapper gallery-wrapper">
-                        {{-- @if ($arts->count() > 0)
-                            @foreach ($arts as $art) --}}
-                        <div class="swiper-slide gallery-slide">
-                            <h2>Bike</h2>
-                            <span>hover here</span>
-                            <div class="gallery-slide-image" style="background-image: url('../assets/images/bike.jpeg');">
-                            </div>
-                            <button class=""></button>
-                        </div>
-                        <div class="swiper-slide gallery-slide">
-                            <h2>Bike</h2>
-                            <span>hover here</span>
-                            <div class="gallery-slide-image" style="background-image: url('../assets/images/bike.jpeg');">
-                            </div>
-                            <button class=""></button>
-                        </div>
-                        <div class="swiper-slide gallery-slide">
-                            <h2>Bike</h2>
-                            <span>hover here</span>
-                            <div class="gallery-slide-image" style="background-image: url('../assets/images/bike.jpeg');">
-                            </div>
-                            <button class=""></button>
-                        </div>
-                        {{-- @endforeach
-                        @else
-                            <div class="pt-5">
-                                <p>Nothing image found.</p>
-                            </div>
-                        @endif --}}
-                    </div>
-                    <div class="swiper-pagination gallery-pagination"></div>
-                </div>
             </div>
         </div>
 
@@ -333,6 +246,119 @@
                         <div class="swiper-pagination event-pagination"></div>
                         {{-- <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="container overflow-hidden">
+                {{-- <div class="w-100 mb-3" style="border: 1px solid white;"></div> --}}
+                <div class="d-flex align-items-center justify-content-between gap-4 ">
+                    <h1>Gallery</h1>
+
+                    <button class="primary-button" onclick="location.href='/arts/index'" style="">
+                        More
+                    </button>
+                </div>
+                <div class="swiper-container gallery-slider position-relative">
+                    <div class="swiper-wrapper gallery-wrapper">
+                        @if ($galleries->count() > 0)
+                            @foreach ($galleries as $gallery)
+                                <div class="swiper-slide gallery-slide">
+                                    <h2>{{ $gallery->name }}</h2>
+                                    <span>hover here</span>
+                                    <div class="gallery-slide-image"
+                                        style="background-image: url('{{ Storage::url($gallery->image) }}');">
+                                    </div>
+                                    <button class=""></button>
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="pt-5">
+                                <p>Nothing image found.</p>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="swiper-pagination gallery-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="" id="product"></div>
+
+        <div class="page-content container overflow-hidden py-5 my-5">
+            <div class="product-container">
+                <div class="d-flex align-items-center justify-content-between gap-4 pb-3">
+                    <h1>Products</h1>
+                    {{-- <div class="w-100 border"></div> --}}
+                    <button class="primary-button" onclick="location.href='/products/index'">
+                        More
+                    </button>
+                </div>
+                <div class="swiper-container product-slider position-relative">
+                    <div class="swiper-wrapper product-wrapper">
+                        @if ($products->count() > 0)
+                            @foreach ($products as $product)
+                                <div class="swiper-slide product-slide "
+                                    onclick="location.href='/products/{{ $product->slug }}'">
+                                    <div class="product-image">
+                                        <img src="{{ Storage::url($product->image) }}" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <a href="/products/{{ $product->slug }}">
+                                            <h5>{{ $product->name }}</h5>
+                                        </a>
+                                        <div class="product-date-tag w-100">
+                                            <p>Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="pt-5">
+                                <p>Nothing info found.</p>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="swiper-pagination product-pagination"></div>
+                    {{-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> --}}
+                </div>
+            </div>
+
+            <div class="client-container pt-5">
+                <div class="text-center mb-4 pt-5 d-flex align-items-center justify-content-center w-100 gap-3">
+                    <div class="circles d-flex align-items-center justify-content-center w-100 gap-3">
+                        <div class="circle-1"></div>
+                        <div class="circle-2"></div>
+                    </div>
+                    <h1>Client</h1>
+                    <div class="circles d-flex align-items-center justify-content-center w-100 gap-3">
+                        <div class="circle-2"></div>
+                        <div class="circle-1"></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-2 client-logo">
+                        <img src="{{ asset('/assets/images/Logo UB.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-2 client-logo">
+                        <img src="{{ asset('/assets/images/Logo UB.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-2 client-logo">
+                        <img src="{{ asset('/assets/images/Logo UB.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-2 client-logo">
+                        <img src="{{ asset('/assets/images/Logo UB.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-2 client-logo">
+                        <img src="{{ asset('/assets/images/Logo UB.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-2 client-logo">
+                        <img src="{{ asset('/assets/images/Logo UB.png') }}" alt="">
                     </div>
                 </div>
             </div>

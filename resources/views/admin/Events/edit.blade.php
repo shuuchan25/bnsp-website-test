@@ -49,8 +49,8 @@
                                 <label for="">Alternative Name</label>
                                 <div class="w-100">
                                     <input type="text" name="kanji" id="kanji"
-                                        class="@error('kanji') is-invalid @enderror" value="{{ old('kanji', $review->kanji) }}"
-                                        required placeholder="Alternative Name">
+                                        class="@error('kanji') is-invalid @enderror"
+                                        value="{{ old('kanji', $review->kanji) }}" required placeholder="Alternative Name">
                                     @error('kanji')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -62,8 +62,9 @@
                                 <label for="">Genre</label>
                                 <div class="w-100">
                                     <input type="text" name="genre" id="genre"
-                                        class="@error('genre') is-invalid @enderror" value="{{ old('genre', $review->genre) }}"
-                                        required placeholder="Slug Destinasi Wisata">
+                                        class="@error('genre') is-invalid @enderror"
+                                        value="{{ old('genre', $review->genre) }}" required
+                                        placeholder="Slug Destinasi Wisata">
                                     @error('genre')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -102,55 +103,55 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="d-block d-md-flex w-100 gap-3 align-items-center justify-content-between pt-3">
+                        <div class="d-block d-md-flex w-100 gap-3 align-items-center justify-content-between pt-3">
+                            <div class="w-100">
+                                <label for="">Cover Image (Max. 1 file & 5MB)</label>
                                 <div class="w-100">
-                                    <label for="">Cover Image (Max. 1 file & 5MB)</label>
-                                    <div class="w-100">
-                                        <input type="file" name="image" id="image"
-                                            class="@error('image') is-invalid @enderror"
-                                            value="{{ old('image', $review->image) }}" onchange="previewImage()">
-                                        @error('image')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-                                    </div>
-                                    <div id="image-preview" class="image-list w-100 pt-2">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-100 pt-3">
-                                <div class="w-100 pt-3">
-                                    <label for="synopsis">Synopsis</label>
-                                    <input type="hidden" name="synopsis" id="synopsis"
-                                        value="{{ old('synopsis', $review->synopsis) }}">
-                                    @error('synopsis')
+                                    <input type="file" name="image" id="image"
+                                        class="@error('image') is-invalid @enderror"
+                                        value="{{ old('image', $review->image) }}" onchange="previewImage()">
+                                    @error('image')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
                                     @enderror
-                                    <trix-editor input="synopsis"></trix-editor>
+                                </div>
+                                <div id="image-preview" class="image-list w-100 pt-2">
                                 </div>
                             </div>
+                        </div>
+                        <div class="w-100 pt-3">
                             <div class="w-100 pt-3">
-                                <div class="w-100 pt-3">
-                                    <label for="review">Review</label>
-                                    <input type="hidden" name="review" id="review"
-                                        value="{{ old('review', $review->review) }}">
-                                    @error('review')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                    <trix-editor input="review"></trix-editor>
-                                </div>
+                                <label for="synopsis">Synopsis</label>
+                                <input type="hidden" name="synopsis" id="synopsis"
+                                    value="{{ old('synopsis', $review->synopsis) }}">
+                                @error('synopsis')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                <trix-editor input="synopsis"></trix-editor>
                             </div>
+                        </div>
+                        <div class="w-100 pt-3">
+                            <div class="w-100 pt-3">
+                                <label for="review">Review</label>
+                                <input type="hidden" name="review" id="review"
+                                    value="{{ old('review', $review->review) }}">
+                                @error('review')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                <trix-editor input="review"></trix-editor>
+                            </div>
+                        </div>
 
-                            <div class="modal-footer w-100">
-                                <button type="button" class="btn cancel-btn mb-0"
-                                    onclick="location.href='/admin/reviews'">Cancel</button>
-                                <button type="submit" class="btn save-btn mb-0 me-0">Save</button>
-                            </div>
+                        <div class="modal-footer w-100">
+                            <button type="button" class="btn cancel-btn mb-0"
+                                onclick="location.href='/admin/reviews'">Cancel</button>
+                            <button type="submit" class="btn save-btn mb-0 me-0">Save</button>
+                        </div>
                     </form>
                 </div>
                 <div class="w-100 pt-3 mt-3 border-top">
@@ -207,7 +208,7 @@
                                         </div>
                                         <form action="{{ route('admin.reviewimages.destroy', $other_image->id) }}"
                                             method="POST"
-                                            onsubmit="return confirm('Apakah anda yakin ingin menghapus ini?')">
+                                            onsubmit="return confirm('Are you sure you want to delete this data?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="delete-item">
